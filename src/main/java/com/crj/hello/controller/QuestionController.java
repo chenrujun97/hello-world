@@ -1,7 +1,6 @@
 package com.crj.hello.controller;
 
 import com.crj.hello.dto.QuestionDTO;
-import com.crj.hello.mapper.QuestionMapper;
 import com.crj.hello.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

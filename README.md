@@ -33,3 +33,7 @@ git remote add origin https://github.com/chenrujun97/hello-world.git
 git push -u origin master  
 
 git commit --amend --no-edit #追加到上一次commit，不修改信息  
+
+##命令
+###mybatis-generator
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate

@@ -1,7 +1,6 @@
 package com.crj.hello.controller;
 
 import com.crj.hello.dto.QuestionDTO;
-import com.crj.hello.mapper.QuestionMapper;
 import com.crj.hello.model.Question;
 import com.crj.hello.model.User;
 import com.crj.hello.service.QuestionService;
