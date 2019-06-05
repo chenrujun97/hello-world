@@ -4,6 +4,7 @@ import com.crj.hello.dto.PaginationDTO;
 import com.crj.hello.dto.QuestionDTO;
 import com.crj.hello.exception.CustomizeErrorCode;
 import com.crj.hello.exception.CustomizeException;
+import com.crj.hello.mapper.QuestionExtMapper;
 import com.crj.hello.mapper.QuestionMapper;
 import com.crj.hello.mapper.UserMapper;
 import com.crj.hello.model.Question;
@@ -23,6 +24,10 @@ public class QuestionService {
     @Autowired
     @SuppressWarnings("all")
     private QuestionMapper questionMapper;
+
+    @Autowired
+    @SuppressWarnings("all")
+    private QuestionExtMapper questionExtMapper;
 
     @Autowired
     @SuppressWarnings("all")
@@ -121,5 +126,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
